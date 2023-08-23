@@ -33,6 +33,12 @@ export default function Projects() {
 
     }, [])
 
+    useEffect(() => {
+        console.log(projectsArr, 'projectsArr');
+
+    }, [projectsArr])
+
+
     return (
         <div className='projects relative z-40 mb-56 text-center'>
             <div className={`uppercase text-xl mb-4 text-${theme}-700 font-mono font-light`}>
