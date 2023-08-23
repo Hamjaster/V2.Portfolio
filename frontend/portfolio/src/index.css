@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.skill {
+    cursor: pointer;
+}
+
+.skill:hover {}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* .skill:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: white;
+    background-size: 400px;
+    border-radius: 40px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.skill:hover:before {
+    filter: blur(10px);
+    opacity: 1;
+} */
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+@keyframes carousel {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* background-position: 400%; */
+    }
+}
+
+.card {
+    display: inline;
+    width: 350px;
+    height: 400px;
+    flex-shrink: 0;
+
+    cursor: pointer;
+    position: relative;
+}
+
+.card::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    /* background: red; */
+}
+
+
+.set {
+
+    animation: carousel 30s infinite linear;
+
+}
+
+.carousel {
+    position: relative;
+    width: 90% !important;
+}
+
+.carousel::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 60px;
+    z-index: 200;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+}
+
+.carousel::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    width: 60px;
+    z-index: 200;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+}
+
+.carousel:hover .set {
+    animation-play-state: paused;
+}
+
+.color {
+    position: relative;
+}
+
+.color::after {
+    position: absolute;
+    content: "";
+    background: #00000031;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: all 400ms;
+}
+
+.color:hover::after {
+    transform: translateY(0);
+
+}
+
+.icon {
+    position: relative;
+    overflow: hidden;
+    border: solid 0px;
+    /* border-radius: 50px; */
+}
+
+.icon::after {
+    position: absolute;
+    content: "";
+    background: #ffffff77;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: skew(30deg) translateY(-100%) translateX(72px);
+    transition: all 750ms;
+    width: 70%;
+    height: 200%;
+}
+
+.icon:hover::after {
+    transform: translateY(100%) translateX(-72px);
+
+}
+
+.corner {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-top: 80px solid #3498db;
+}
+
+
+
+/* .icon {
+    position: relative;
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #333;
+  } */
+
+
+.blocks {
+    display: flex;
+    list-style-type: none;
+    padding: .7rem;
+    border-radius: 1rem;
+    gap: 1rem;
+    background: hsl(0 0% 100% / 0.5);
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 0px 0px 20px 20px;
+}
+
+
+.block__item {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 1rem;
+    /* background: linear-gradient(to bottom right, #72c6ef, #004e8f), #f8f9fa; */
+    display: inline-block;
+    transition: transform 0.2s;
+    transform-origin: 50% 100%;
+    position: relative;
+    /* transform: translateY(calc(var(--lerp) * -75%)); */
+}
+
+.block__item:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1;
+    border-left: .5rem solid white;
+    border-top: .5rem solid white;
+    border-radius: 1rem;
+    -webkit-mask: linear-gradient(135deg, black, transparent 50%);
+    mask: linear-gradient(135deg, black, transparent 50%);
+}
