@@ -18,7 +18,7 @@ export default function Projects() {
     const getProjects = async () => {
         setLoading(true)
         try {
-            const { data } = await axios.get('/projects')
+            const { data } = await axios.get('https://v2-portfolio-cxfebf5bs-hamjaster.vercel.app/projects')
             setprojectsArr(data)
             setLoading(false)
         } catch (error) {
