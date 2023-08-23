@@ -191,9 +191,9 @@ body {
 .blocks {
     display: flex;
     list-style-type: none;
-    padding: .7rem;
+    padding: .7rem .5rem;
     border-radius: 1rem;
-    gap: 1rem;
+    gap: 0.7rem;
     background: hsl(0 0% 100% / 0.5);
     align-items: center;
     justify-content: center;

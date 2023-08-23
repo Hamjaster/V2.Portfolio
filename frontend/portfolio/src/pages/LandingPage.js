@@ -26,10 +26,10 @@ export default function LandingPage() {
             <div className={`flex  flex-col justify-between relative bg-${theme}-700 items-center bg-fixed text-white h-[100vh]  text-4xl `}>
 
                 {/* Color Pallette */}
-                <motion.div initial={{ y: -500, }} animate={{ y: 0 }} transition={{ duration: 1, delay: i + i, type: 'tween' }} className="colortheme  z-50 [&>div]:cursor-pointer blocks flex flex-row fixed [&>div]:h-10 [&>div]:relative top-0 left-50% ">
+                <motion.div initial={{ y: -500, }} animate={{ y: 0 }} transition={{ duration: 1, delay: i + i, type: 'tween' }} className="colortheme  z-50 [&>div]:cursor-pointer blocks flex flex-row fixed [&>div]:h-8 [&>div]:relative top-0 left-50% ">
                     <div id='red' onClick={() => setTheam('red')} className='block__item bg-gradient-to-tr from-red-500 to-red-700'>
                         {theme === 'red' ?
-                            (<div className='red text-red-700 text-5xl absolute -bottom-3 left-4'>
+                            (<div className='red text-red-700 text-5xl absolute -bottom-3     left-3 '>
                                 .
                             </div>)
                             :
@@ -40,7 +40,7 @@ export default function LandingPage() {
                     </div>
                     <div id='blue' onClick={() => setTheam('blue')} className='block__item bg-gradient-to-tr from-blue-500 to-blue-700 '>
                         {theme === 'blue' ?
-                            (<div className='red text-blue-700 text-5xl absolute -bottom-3 left-4'>
+                            (<div className='red text-blue-700 text-5xl absolute -bottom-3     left-3 '>
                                 .
                             </div>)
                             :
@@ -51,7 +51,7 @@ export default function LandingPage() {
                     </div>
                     <div id='green' onClick={() => setTheam('green')} className='block__item bg-gradient-to-tr from-green-500 to-green-700'>
                         {theme === 'green' ?
-                            (<div className='red text-green-700 text-5xl absolute -bottom-3 left-4'>
+                            (<div className='red text-green-700 text-5xl absolute -bottom-3     left-3 '>
                                 .
                             </div>)
                             :
@@ -62,7 +62,7 @@ export default function LandingPage() {
                     </div>
                     <div id='purple' onClick={() => setTheam('purple')} className='block__item bg-gradient-to-tr from-purple-500 to-purple-700 '>
                         {theme === 'purple' ?
-                            (<div className='red text-purple-700 text-5xl absolute -bottom-3 left-4'>
+                            (<div className='red text-purple-700 text-5xl absolute -bottom-3     left-3 '>
                                 .
                             </div>)
                             :
@@ -73,7 +73,7 @@ export default function LandingPage() {
                     </div>
                     <div id='pink' onClick={() => setTheam('pink')} className='block__item bg-gradient-to-tr from-pink-500 to-pink-700'>
                         {theme === 'pink' ?
-                            (<div className='red text-pink-700 text-5xl absolute -bottom-3 left-4'>
+                            (<div className='red text-pink-700 text-5xl absolute -bottom-3     left-3 '>
                                 .
                             </div>)
                             :
@@ -151,24 +151,37 @@ export default function LandingPage() {
 
                 {/* Social Icons             */}
                 <motion.div transition={{ duration: 1, when: 'beforeChildren', staggerChildren: 0.2, delayChildren: 0.2, delay: i + 4 }} className="icons z-40 space-y-5 flex flex-col bottom-20 left-8 absolute">
-                    <motion.div initial={{ y: 400, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{
-                        duration: 1,
-                        delay: i + 1
-                    }} className="icon cursor-pointer rounded-full">
-                        <FaGithub />
-                    </motion.div>
-                    <motion.div initial={{ y: 400, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{
-                        duration: 1,
-                        delay: i + 1
-                    }} className="icon cursor-pointer rounded-3xl">
-                        <FaInstagram />
-                    </motion.div>
-                    <motion.div initial={{ y: 400, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{
-                        duration: 1,
-                        delay: i + 1
-                    }} className="icon cursor-pointer rounded-xl">
-                        <FaLinkedin />
-                    </motion.div>
+
+                    <a target='_' href="https://github.com/Hamjaster">
+
+                        <motion.div initial={{ y: 400, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{
+                            duration: 1,
+                            delay: i + 1
+                        }} className="icon cursor-pointer rounded-full">
+                            <FaGithub />
+                        </motion.div>
+                    </a>
+
+                    <a target='_' href="https://www.instagram.com/hamza_.developer/">
+
+                        <motion.div initial={{ y: 400, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{
+                            duration: 1,
+                            delay: i + 1
+                        }} className="icon cursor-pointer rounded-3xl">
+                            <FaInstagram />
+                        </motion.div>
+                    </a>
+
+                    <a target='_' href="https://www.linkedin.com/in/hamza-shah-a02505248/">
+
+                        <motion.div initial={{ y: 400, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{
+                            duration: 1,
+                            delay: i + 1
+                        }} className="icon cursor-pointer rounded-xl">
+                            <FaLinkedin />
+                        </motion.div>
+                    </a>
+
                 </motion.div>
 
             </div>
