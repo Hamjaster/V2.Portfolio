@@ -10,13 +10,13 @@ export default function About() {
   return (
     <div className={`about-page relative z-40 md:h-[750px]  text-${theme}-700 flex flex-col md:flex-row  space-y-5 mt-52 mb-11`}>
 
-      <div className="text pl-10 pt-6 space-y-6  md:w-1/2  ">
+      <div className="text pl-3 md:pl-10 pt-6 space-y-6  md:w-1/2  ">
 
 
         <div className={`uppercase text-xl text-${theme}-700 font-mono font-light`}>
           <FadeUp delay={i} text='about me' />
         </div>
-        <div className="text-5xl w-full md:text-6xl font-bold capitalize">
+        <div className="text-4xl sm:text-4xl w-full md:text-6xl font-bold capitalize">
           <FadeUp delay={i} text="Let me introduce myself" />
         </div>
         <p className='text-xl 2xl:text-3xl  w-11/12 md:w-11/12 leading-relaxed font-sans '>

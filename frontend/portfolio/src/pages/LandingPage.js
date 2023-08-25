@@ -5,7 +5,8 @@ import AnimateChar from '../components/AnimateChar'
 import { TypeAnimation } from 'react-type-animation';
 import ParticlesComponent from '../components/Particles';
 import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
-
+import x from '../images/x.png'
+import x2 from '../images/x2.png'
 
 export default function LandingPage() {
     const hy = 'Hy, '
@@ -92,19 +93,19 @@ export default function LandingPage() {
                 {/* Text        */}
                 <div className="text relative z-40  my-auto font-[Inter] flex items-center justify-center flex-col">
 
-                    <div className="head w-full sm:w-2/3 lg:w-full flex flex-wrap  lg:space-x-6 lg:flex-nowrap flex-row justify-start sm:justify-center items-center ml-8 sm:-ml-8 md:ml-0  h-52 font-[700] md:text-8xl">
+                    <div className="head w-full sm:w-2/3 lg:w-full flex flex-wrap space-y-6 min-[310px]:space-y-0 lg:space-x-6 lg:flex-nowrap flex-row justify-start sm:justify-center items-center ml-8 sm:-ml-8 md:ml-0  h-52 font-[700] md:text-8xl">
 
-                        <span className='block md:inline text-[5.5rem] min-[535px]:text-8xl'>
+                        <span className='block md:inline text-[5rem] min-[535px]:text-8xl'>
                             <AnimateChar delay={i} text={hy} />
                         </span>
-                        <span className='block md:inline  text-[5.5rem]  min-[535px]:text-8xl'>
+                        <span className='block md:inline  text-[5rem]  min-[535px]:text-8xl'>
                             <AnimateChar delay={i + 0.7} text={I} />
                         </span>
-                        <span className='block md:inline text-[4.8rem] min-[535px]:text-[5.2rem] mt-2 sm:mt-0 mb-5 sm:mb-0 sm:text-[5.7rem]'>
+                        <span className='block md:inline text-[4.3rem] min-[535px]:text-[5.2rem] mt-2 sm:mt-0 mb-5 sm:mb-0 sm:text-[5.7rem]'>
                             <AnimateChar delay={i + 0.7} text={hamza} />
                         </span>
 
-                        <motion.span className='text-6xl sm:text-7xl ml-2 items-center flex' initial={{ opacity: 0 }}
+                        <motion.span className='text-6xl hidden  sm:text-7xl ml-2 items-center min-[310px]:flex' initial={{ opacity: 0 }}
                             animate={{
                                 rotate: [null, 15, -15, 15, 0],
                                 opacity: 1,
@@ -113,12 +114,13 @@ export default function LandingPage() {
                         >👋</motion.span>
                     </div>
 
-                    <motion.div initial={{ opacity: 0, y: 100 }} transition={{ duration: 1, delay: i + 2.8 }} animate={{ opacity: 1, y: 0 }} style={{ color: 'rgba(255, 255, 255, 0.7)' }} className="desc w-full flex justify-start sm:justify-center lg:-mt-5 text-2xl md:text-4xl items-center ml-10 md:ml-0 mt-4 ">
+                    {/* Description */}
+                    <motion.div initial={{ opacity: 0, y: 100 }} transition={{ duration: 1, delay: i + 2.8 }} animate={{ opacity: 1, y: 0 }} style={{ color: 'rgba(255, 255, 255, 0.7)' }} className="desc w-full flex justify-start sm:justify-center lg:-mt-7 text-lg  min-[310px]:text-2xl md:text-4xl items-center ml-10 md:ml-0 mt-2 sm:mt-2 ">
 
                         <TypeAnimation
                             sequence={[
                                 // Same substring at the start will only be typed once, initially
-                                'I’m a full-stack developer 🎩💻',
+                                'I’m a Full-stack developer 💻',
                                 2000,
                                 'I’m a MERN magician 🧙 ',
                                 2000,
@@ -150,9 +152,9 @@ export default function LandingPage() {
                 </div>
 
                 {/* Social Icons             */}
-                <motion.div transition={{ duration: 1, when: 'beforeChildren', staggerChildren: 0.2, delayChildren: 0.2, delay: i + 4 }} className="icons z-40 space-y-5 flex flex-col bottom-20 left-8 absolute">
+                <motion.div transition={{ duration: 1, when: 'beforeChildren', staggerChildren: 0.2, delayChildren: 0.2, delay: i + 4 }} className="icons z-40 space-y-5 flex flex-col flex-wrap bottom-5 left-6 sm:bottom-14 sm:left-7 absolute">
 
-                    <a target='_' href="https://github.com/Hamjaster">
+                    <a target='_blank' href="https://github.com/Hamjaster">
 
                         <motion.div initial={{ y: 400, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{
                             duration: 1,
@@ -162,7 +164,7 @@ export default function LandingPage() {
                         </motion.div>
                     </a>
 
-                    <a target='_' href="https://www.instagram.com/hamza_.developer/">
+                    <a target='_blank' href="https://www.instagram.com/hamza_.developer/">
 
                         <motion.div initial={{ y: 400, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{
                             duration: 1,
@@ -172,13 +174,27 @@ export default function LandingPage() {
                         </motion.div>
                     </a>
 
-                    <a target='_' href="https://www.linkedin.com/in/hamza-shah-a02505248/">
+                    <a target='_blank' href="https://www.linkedin.com/in/hamza-shah-a02505248/">
 
                         <motion.div initial={{ y: 400, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{
                             duration: 1,
                             delay: i + 1
                         }} className="icon cursor-pointer rounded-xl">
                             <FaLinkedin />
+                        </motion.div>
+                    </a>
+
+                    <a target='_blank' href="https://twitter.com/dev_hamzashah">
+
+                        <motion.div initial={{ y: 400, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{
+                            duration: 1,
+                            delay: i + 1
+                        }} className="icon cursor-pointer text-center flex items-center justify-center rounded-lg">
+
+
+                            <img className='twitter rounded-lg' width={'33px'} src={x2} alt="twitter hamza" srcset="" />
+
+
                         </motion.div>
                     </a>
 

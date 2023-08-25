@@ -18,7 +18,7 @@ export default function Skills() {
             <div className='uppercase mt-64 pt-20 text-center text-xl text-white font-mono font-light'>
                 <FadeUp text={'skills'} />
             </div>
-            <div className='text-white  mb-24 text-6xl md:text-6xl text-center font-bold'>
+            <div className='text-white text-4xl sm:text-4xl md:text-6xl  mb-14 sm:mb-24  text-center font-bold'>
 
                 <FadeUp delay={0.3} text={'Dive into my exprience'} />
             </div>
@@ -36,7 +36,7 @@ export default function Skills() {
                 <Skill icon={<BiLogoMongodb />} text={'MongoDB'} s={'text-2xl'} mdS={'text-3xl'} />
                 <Skill icon={<BiLogoCPlusPlus />} text={'C++'} />
                 <Skill icon={<TbBrandVscode />} text={'VScode'} />
-                {/* <Skill icon={<FaGit />} text={'Git'} /> */}
+                {/* <Skill icon={<img src={x} />} text={'Git'} /> */}
 
             </div>
 

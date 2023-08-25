@@ -21,6 +21,13 @@ function App() {
     'bg-black-700',
     'bg-pink-700',
 
+    'border-red-600',
+    'border-pink-600',
+    'border-purple-600',
+    'border-green-600',
+    'border-purple-600',
+    'border-black-600',
+
     'bg-red-400',
     'bg-purple-400',
     'bg-blue-400',

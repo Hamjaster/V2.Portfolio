@@ -44,7 +44,7 @@ export default function Projects() {
             <div className={`uppercase text-xl mb-4 text-${theme}-700 font-mono font-light`}>
                 <FadeUp delay={0.1} text='about me' />
             </div>
-            <div className={`capitalize text-6xl w-11/12 text-${theme}-700 font-bold`}>
+            <div className={`capitalize text-4xl sm:text-4xl md:text-6xl w-11/12 text-${theme}-700 font-bold`}>
                 <FadeUp delay={0.1} text='Check out my work' />
             </div>
 

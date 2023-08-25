@@ -71,7 +71,7 @@ export default function Contact() {
     return (
         <>
             <ToastContainer />
-            <div className={`bg-${theme}-700 z-40  relative mb-5 text-white w-full flex flex-col px-16 pt-14 justify-center`}>
+            <div className={`bg-${theme}-700 z-40  relative mb-5 text-white w-full flex flex-col px-5 sm:px-10 md:px-14 pt-14 justify-center`}>
                 <motion.div initial={{ y: 0, x: 0 }} animate={{ y: [-40, 0, 80] }} transition={{
                     duration: 5,
                     ease: 'linear',
@@ -84,8 +84,8 @@ export default function Contact() {
                 </motion.div>
                 <FadeUp
                     text={<div className="text z-10 ">
-                        <h1 className='text-5xl md:text-6xl font-bold'>Contact</h1>
-                        <h3 className='text-lg sm:text-xl md:text-2xl font-thin mt-3'>If you have any query or question, don't hesitate to use the form.
+                        <h1 className='text-4xl sm:text-4xl md:text-6xl font-bold'>Contact</h1>
+                        <h3 className='text-sm sm:text-xl md:text-2xl font-thin mt-3'>If you have any query or question, don't hesitate to use the form.
                             Don't worry, I will not bite you :)
                         </h3>
                     </div>}
@@ -144,7 +144,7 @@ export default function Contact() {
                     <FadeUp
                         text={
                             <div class="w-full pt-3 pb-12">
-                                <button type="submit" class={`w-1/4 sm:w-[16%] md:w-[19%] rounded-md bg-white text-${theme}-700 px-4 py-2 transition duration-50 focus:outline-none font-semibold hover:bg-slate-200 hover:text-${theme}-700 text-xl cursor-pointer`}>
+                                <button type="submit" class={`w-2/5 sm:w-[16%] md:w-[19%] rounded-md bg-white text-${theme}-700 px-4 py-2 transition duration-50 focus:outline-none font-semibold hover:bg-slate-200 hover:text-${theme}-700 text-xl cursor-pointer`}>
                                     Send
                                 </button>
                             </div>

@@ -230,3 +230,13 @@ body {
     -webkit-mask: linear-gradient(135deg, black, transparent 50%);
     mask: linear-gradient(135deg, black, transparent 50%);
 }
+
+.shining-image:hover {
+    transform: scale(1.1);
+    /* Add your shine effect here */
+    filter: brightness(1.5);
+    /* Adjust the brightness to enhance the shine */
+    mask-image: url('./images/x.png');
+    mask-mode: luminance;
+    /* Apply the mask based on luminance values */
+}

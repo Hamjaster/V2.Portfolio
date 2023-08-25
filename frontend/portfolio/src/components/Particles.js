@@ -317,7 +317,7 @@ const ParticlesComponent = () => {
                     height: 1080
                 },
                 limit: 0,
-                value: 100
+                value: 200
             },
             opacity: {
                 random: {
@@ -325,7 +325,7 @@ const ParticlesComponent = () => {
                     minimumValue: 0.1
                 },
                 value: {
-                    min: 0.1,
+                    min: 0.3,
                     max: 0.5
                 },
                 animation: {
@@ -451,7 +451,7 @@ const ParticlesComponent = () => {
             twinkle: {
                 lines: {
                     enable: false,
-                    frequency: 0.05,
+                    frequency: 0.15,
                     opacity: 1
                 },
                 particles: {
