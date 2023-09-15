@@ -325,8 +325,8 @@ const ParticlesComponent = () => {
                     minimumValue: 0.1
                 },
                 value: {
-                    min: 0.3,
-                    max: 0.5
+                    min: 0.1,
+                    max: 0.3
                 },
                 animation: {
                     count: 0,
@@ -531,7 +531,7 @@ const ParticlesComponent = () => {
                 distance: 150,
                 enable: true,
                 frequency: 1,
-                opacity: 0.4,
+                opacity: 0.3,
                 shadow: {
                     blur: 5,
                     color: {

@@ -19,8 +19,10 @@ export default function Reveal({ children, image, theme }) {
             <motion.div ref={ref}
                 style={{
                     background: `url(${image})`,
+
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center'
+                    backgroundPosition: 'center',
+
                 }}
                 variants={{
                     initial: { opacity: 0 },

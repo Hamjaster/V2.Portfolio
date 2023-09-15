@@ -30,7 +30,7 @@ export default function LandingPage() {
                 <motion.div initial={{ y: -500, }} animate={{ y: 0 }} transition={{ duration: 1, delay: i + i, type: 'tween' }} className="colortheme  z-50 [&>div]:cursor-pointer blocks flex flex-row fixed [&>div]:h-8 [&>div]:relative top-0 left-50% ">
                     <div id='red' onClick={() => setTheam('red')} className='block__item bg-gradient-to-tr from-red-500 to-red-700'>
                         {theme === 'red' ?
-                            (<div className='red text-red-700 text-5xl absolute -bottom-3     left-3 '>
+                            (<div className='red text-red-700 text-5xl dot  '>
                                 .
                             </div>)
                             :
@@ -41,7 +41,7 @@ export default function LandingPage() {
                     </div>
                     <div id='blue' onClick={() => setTheam('blue')} className='block__item bg-gradient-to-tr from-blue-500 to-blue-700 '>
                         {theme === 'blue' ?
-                            (<div className='red text-blue-700 text-5xl absolute -bottom-3     left-3 '>
+                            (<div className='red text-blue-700 text-5xl  dot '>
                                 .
                             </div>)
                             :
@@ -52,7 +52,7 @@ export default function LandingPage() {
                     </div>
                     <div id='green' onClick={() => setTheam('green')} className='block__item bg-gradient-to-tr from-green-500 to-green-700'>
                         {theme === 'green' ?
-                            (<div className='red text-green-700 text-5xl absolute -bottom-3     left-3 '>
+                            (<div className='red text-green-700 text-5xl dot '>
                                 .
                             </div>)
                             :
@@ -63,7 +63,7 @@ export default function LandingPage() {
                     </div>
                     <div id='purple' onClick={() => setTheam('purple')} className='block__item bg-gradient-to-tr from-purple-500 to-purple-700 '>
                         {theme === 'purple' ?
-                            (<div className='red text-purple-700 text-5xl absolute -bottom-3     left-3 '>
+                            (<div className='red text-purple-700 text-5xl dot '>
                                 .
                             </div>)
                             :
@@ -74,7 +74,7 @@ export default function LandingPage() {
                     </div>
                     <div id='pink' onClick={() => setTheam('pink')} className='block__item bg-gradient-to-tr from-pink-500 to-pink-700'>
                         {theme === 'pink' ?
-                            (<div className='red text-pink-700 text-5xl absolute -bottom-3     left-3 '>
+                            (<div className='red text-pink-700 text-5xl dot '>
                                 .
                             </div>)
                             :
@@ -83,6 +83,19 @@ export default function LandingPage() {
                             )
                         }
                     </div>
+
+                    {/* <div id='black' onClick={() => setTheam('')} className='block__item bg-gradient-to-tr from-gray-800 to-black'>
+                        {theme === 'black' ?
+                            (<div className='red text-black-700 text-5xl absolute -bottom-3     left-3 '>
+                                .
+                            </div>)
+                            :
+                            (
+                                <div></div>
+                            )
+                        }
+                    </div> */}
+
                 </motion.div>
 
                 {/* Particles */}

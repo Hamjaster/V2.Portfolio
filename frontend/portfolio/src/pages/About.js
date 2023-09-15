@@ -1,14 +1,39 @@
 import React, { useContext } from 'react'
-import image from '../images/image.jpg'
+import blueimage from '../images/pool.jpg'
+import redpool from '../images/redpool.jpg'
+import purplepool from '../images/purplepool.jpg'
+import pinkpool from '../images/pinkpool.jpg'
+import greenpool from '../images/greenpool.jpg'
 import Reveal from '../components/Reveal'
 import FadeUp from '../components/FadeUp'
 import { MyContext } from '../context/ContextProvider';
 
 export default function About() {
   const { theme } = useContext(MyContext)
+  const sendPic = (theme) => {
+    switch (theme) {
+      case 'red':
+        return redpool
+        break;
+      case 'pink':
+        return pinkpool
+        break;
+      case 'blue':
+        return blueimage
+        break;
+      case 'purple':
+        return purplepool
+        break;
+      case 'green':
+        return greenpool
+        break;
+      default:
+        break;
+    }
+  }
   const i = 0.2;
   return (
-    <div className={`about-page relative z-40 md:h-[750px]  text-${theme}-700 flex flex-col md:flex-row  space-y-5 mt-52 mb-11`}>
+    <div className={`about-page relative z-40 md:h-[750px]  text-${theme}-700 flex flex-col-reverse md:flex-row  space-y-5 mt-52 mb-11`}>
 
       <div className="text pl-3 md:pl-10 pt-6 space-y-6  md:w-1/2  ">
 
@@ -32,8 +57,9 @@ export default function About() {
 
         </p>
       </div>
-      <div className="image overflow-hidden my-auto  h-[100vh] md:h-full md:w-1/2">
-        <Reveal theme={theme} image={image} />
+
+      <div className="image overflow-hidden my-auto mx-4 h-[100vh] md:h-full md:w-1/2">
+        <Reveal theme={theme} image={sendPic(theme)} />
       </div>
 
     </div>
