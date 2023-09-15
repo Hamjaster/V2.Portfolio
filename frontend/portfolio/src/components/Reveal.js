@@ -1,11 +1,15 @@
 import React, { useRef, useEffect } from 'react'
 import { motion, useAnimation, useInView } from 'framer-motion'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
-export default function Reveal({ children, image, theme }) {
+
+
+export default function Reveal({ children, theme, styles, image, placeholder }) {
     const ref = useRef(null)
     const InView = useInView(ref, {})
     const slideControls = useAnimation()
     const mainControls = useAnimation()
+
 
     useEffect(() => {
         console.log(InView);
@@ -14,26 +18,27 @@ export default function Reveal({ children, image, theme }) {
         // eslint-disable-next-line
     }, [InView])
 
+    useEffect(() => {
+        console.log('renderd !!')
+    }, [])
+
+
+
+
     return (
         <>
             <motion.div ref={ref}
-                style={{
-                    background: `url(${image})`,
-
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-
-                }}
+                style={styles}
                 variants={{
                     initial: { opacity: 0 },
                     animate: { opacity: 1 }
                 }}
                 initial='initial'
                 animate={mainControls}
-                className=' h-full overflow-hidden transition-transform cursor-pointer hover:scale-110 duration-300'
-
+                className=' h-full bg-center bg-cover bg-no-repeat overflow-hidden rounded-xl transition-transform cursor-pointer hover:scale-110 duration-300'
                 transition={{ when: 'afterChildren' }}
             >
+
                 <motion.div
                     variants={{
                         initial: { translateX: "0px" },

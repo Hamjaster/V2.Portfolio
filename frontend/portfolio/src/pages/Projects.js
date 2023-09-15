@@ -75,7 +75,7 @@ export default function Projects() {
             </div>
 
             {/* Projecets for Mbile */}
-            <div className="projects_mb md:hidden mt-24 mx-auto space-y-4">
+            <div className="projects_mb flex flex-col-reverse md:hidden mt-24 mx-auto space-y-7">
                 {projectsArr.map((project) => {
                     return <ProjectsMB project={project} />
                 })}
