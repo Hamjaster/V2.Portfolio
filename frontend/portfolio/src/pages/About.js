@@ -103,7 +103,7 @@ export default function About() {
         </p>
       </div>
 
-      <div className="image rounded-xl overflow-hidden my-auto mx-4 h-[100vh] md:h-full md:w-1/2">
+      <div className="image rounded-xl overflow-hidden my-auto mx-4 h-[45vh] sm:h-[70vh] md:h-[80vh] md:w-1/2">
         <Suspense fallback={<div>Loading...</div>}>
           <Reveal count={count} image={
             <img src={sendPic(theme)} />

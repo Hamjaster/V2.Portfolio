@@ -43,13 +43,12 @@ export default function Contact() {
             // });
 
         } else {
-            emailjs
-                .sendForm(
-                    "service_vxyotcd",
-                    "template_umq2uh5",
-                    e.target,
-                    "0kaS0Fh3vdQJZwSbc"
-                )
+            emailjs.sendForm(
+                "service_vxyotcd",
+                "template_umq2uh5",
+                e.target,
+                "0kaS0Fh3vdQJZwSbc"
+            )
                 .then(
                     (result) => {
                         r = result.text;

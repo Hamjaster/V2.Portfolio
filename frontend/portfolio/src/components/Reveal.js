@@ -35,7 +35,7 @@ export default function Reveal({ children, theme, styles, image, placeholder }) 
                 }}
                 initial='initial'
                 animate={mainControls}
-                className=' h-full bg-center bg-cover bg-no-repeat overflow-hidden rounded-xl transition-transform cursor-pointer hover:scale-110 duration-300'
+                className='h-full bg-center bg-cover bg-no-repeat overflow-hidden rounded-xl transition-transform cursor-pointer hover:scale-110 duration-300'
                 transition={{ when: 'afterChildren' }}
             >
 
