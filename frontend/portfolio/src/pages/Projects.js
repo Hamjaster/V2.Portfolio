@@ -49,25 +49,16 @@ export default function Projects() {
             </div>
 
             {/* Projects for PC */}
-            <div className='carousel hidden  mt-24 mx-auto md:flex flex-row overflow-hidden space-x-4'>
+            <div className='hidden mx-12 mt-24 md:flex flex-col-reverse overflow-hidden space-y-4'>
                 {loading ?
                     (
                         <div>Loading</div>
                     )
                     : (
                         <>
-                            <div className="flex set  flex-nowrap flex-row space-x-4">
-                                {projectsArr.map((project) => {
-                                    return <Project project={project} />
-                                })}
-                            </div>
-
-                            <div className="flex set  flex-nowrap flex-row space-x-4">
-                                {projectsArr.map((project) => {
-                                    return <Project project={project} />
-                                })}
-                            </div>
-
+                            {projectsArr.map((project) => {
+                                return <FadeUp delay={0.1} text={<Project project={project} />} />
+                            })}
                         </>
                     )
                 }

@@ -6,16 +6,29 @@ export default function Project({ project }) {
     return (
         <>
 
-            <div className={`card group border-2 border-${theme}-600 overflow-hidden hover:after:opacity-100 after:bg-${theme}-700 after:bg-opacity-75 after:transition-all after:duration-500`}>
-                <img className='w-full group-hover:scale-110 transition-all duration-500 h-full object-cover ' src={project.img} alt="" />
+            <div className={`border-2 border-${theme}-600 h-72 flex flex-row`}>
 
-                <div className="info font-[Roboto] w-11/12 mx-auto relative z-50 opacity-0 group-hover:translate-y-[-272px] text-white font-semibold text-4xl group-hover:opacity-100 transition-all duration-500">
-                    <span>{project.title}</span>
-                    <div className='font-light text-sm mt-4 mb-4'>{project.desc}</div>
-                    <a target='_' className={`text-lg border hover:bg-slate-200 border-slate-50 mt-6 text-${theme}-700 rounded-xl bg-white px-4 py-2`} href={project.link}>View</a>
+                <div style={{
+                    background: `url(${project.img}) center/cover`
+                }} className="w-2/5">
+                </div>
+
+
+                <div className={`info font-[Roboto] w-3/5 mx-auto relative z-50 bg-${theme}-600 text-white font-semibold text-4xl items-start justify-between flex flex-col px-4 py-7 space-y-3`}>
+
+                    <div className='text-start space-y-3'>
+                        <span>{project.title}</span>
+                        <div className='font-light text-lg '>{project.desc}</div>
+                    </div>
+
+                    <div className="text-start w-full">
+                        <a target='_' className={`text-lg w-36 border hover:bg-slate-200 border-slate-50 text-${theme}-700 rounded-xl bg-white px-4 py-2`} href={project.link}>View</a>
+                    </div>
+
                 </div>
 
             </div>
+
         </>
     )
 }

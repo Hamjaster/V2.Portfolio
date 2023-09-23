@@ -25,7 +25,7 @@ function App() {
     'border-pink-600',
     'border-purple-600',
     'border-green-600',
-    'border-purple-600',
+    'border-blue-600',
     'border-black-600',
 
     'bg-red-400',
