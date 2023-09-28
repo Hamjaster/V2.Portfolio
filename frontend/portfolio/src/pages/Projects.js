@@ -51,8 +51,8 @@ export default function Projects() {
                 <FadeUp delay={0.1} text='Check out my work' />
             </div>
 
-            {/* Projects for PC */}
-            <div className='hidden mx-12 mt-24 md:flex flex-col-reverse overflow-hidden space-y-4'>
+            {/* Projects Section */}
+            <div className='mx-12 mt-24 flex flex-col-reverse overflow-hidden space-y-4'>
 
                 {loading ?
                     (
@@ -60,13 +60,7 @@ export default function Projects() {
                     )
                     : (
                         <>
-                            {projectsArr.filter((project) => {
-                                return project.featured === true
-                            }).map((featured_project) => {
-                                return <FadeUp delay={0.1} text={<Project project={featured_project} />} />
-                            })
-                            }
-
+                            {/* Displaying un-featured products */}
                             {projectsArr
                                 .filter((project) => {
                                     return !project.featured
@@ -75,18 +69,21 @@ export default function Projects() {
                                     return <FadeUp delay={0.1} text={<Project project={project} />} />
                                 })
                             }
+
+                            {/* Featured Produce to top */}
+                            {projectsArr.filter((project) => {
+                                return project.featured === true
+                            }).map((featured_project) => {
+                                return <FadeUp delay={0.1} text={<Project project={featured_project} />} />
+                            })
+                            }
+
                         </>
                     )
                 }
 
             </div>
 
-            {/* Projecets for Mbile */}
-            <div className="projects_mb flex flex-col-reverse md:hidden mt-24 mx-auto space-y-7">
-                {projectsArr.map((project) => {
-                    return <ProjectsMB project={project} />
-                })}
-            </div>
         </div>
     )
 }

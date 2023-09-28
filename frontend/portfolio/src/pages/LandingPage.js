@@ -134,16 +134,16 @@ export default function LandingPage() {
                             sequence={[
                                 // Same substring at the start will only be typed once, initially
                                 'I’m a Front-end developer 💻',
-                                2000,
+                                2400,
                                 'I’m a MERN magician 🧙 ',
-                                2000,
+                                2400,
                                 'I’m a UI/UX designer ✍🎨 ',
-                                2000,
+                                2400,
                                 'I make cool websites 😉',
-                                2000
+                                2400
                             ]}
                             speed={30}
-                            deletionSpeed={100}
+                            deletionSpeed={130}
                             repeat={Infinity}
                         />
                     </motion.div>

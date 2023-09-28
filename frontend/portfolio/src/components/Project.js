@@ -6,23 +6,24 @@ export default function Project({ project }) {
     return (
         <>
 
-            <div className={`border-2 border-${theme}-600 h-72 flex flex-row`}>
+            <div className={`border-2 border-${theme}-600 md:h-72 flex md:flex-row flex-col`}>
 
+                {/* Project Image BG */}
                 <div style={{
                     background: `url(${project.img}) center/cover`
-                }} className="w-2/5">
+                }} className="md:w-2/5 h-56 md:h-full">
                 </div>
 
+                {/* Info */}
+                <div className={`info font-[Roboto] md:w-3/5 mx-auto relative z-50 bg-${theme}-600 text-white font-semibold md:text-4xl text-2xl items-start justify-between flex flex-col px-4 md:py-7 py-4 space-y-3`}>
 
-                <div className={`info font-[Roboto] w-3/5 mx-auto relative z-50 bg-${theme}-600 text-white font-semibold text-4xl items-start justify-between flex flex-col px-4 py-7 space-y-3`}>
-
-                    <div className='text-start space-y-3'>
-                        <span>{project.title}</span>
-                        <div className='font-light text-lg '>{project.desc}</div>
+                    <div className='text-start md:space-y-3 space-y-1'>
+                        <span className=''>{project.title}</span>
+                        <div className='font-light text-sm md:text-lg '>{project.desc}</div>
                     </div>
 
                     <div className="text-start w-full">
-                        <a target='_' className={`text-lg w-36 border hover:bg-slate-200 border-slate-50 text-${theme}-700 rounded-xl bg-white px-4 py-2`} href={project.link}>View</a>
+                        <a target='_' className={`text-lg text-center md:w-36 block w-full border hover:bg-slate-200 border-slate-50 text-${theme}-700 md:rounded-xl rounded-sm bg-white md:px-4 px-2 md:py-2 py-1`} href={project.link}>View</a>
                     </div>
 
                 </div>
