@@ -4,7 +4,8 @@ const ProjectsSchema = mongoose.Schema({
     title: String,
     desc: String,
     link: String,
-    img: String
+    img: String,
+    featured: Boolean
 })
 
 const ProjectModal = mongoose.model('projects', ProjectsSchema)

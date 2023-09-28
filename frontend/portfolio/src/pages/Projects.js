@@ -35,7 +35,10 @@ export default function Projects() {
 
     useEffect(() => {
         console.log(projectsArr, 'projectsArr');
-
+        const filtered = projectsArr.filter((project) => {
+            return !project.featured
+        })
+        console.log(filtered)
     }, [projectsArr])
 
 
@@ -50,15 +53,28 @@ export default function Projects() {
 
             {/* Projects for PC */}
             <div className='hidden mx-12 mt-24 md:flex flex-col-reverse overflow-hidden space-y-4'>
+
                 {loading ?
                     (
                         <div>Loading</div>
                     )
                     : (
                         <>
-                            {projectsArr.map((project) => {
-                                return <FadeUp delay={0.1} text={<Project project={project} />} />
-                            })}
+                            {projectsArr.filter((project) => {
+                                return project.featured === true
+                            }).map((featured_project) => {
+                                return <FadeUp delay={0.1} text={<Project project={featured_project} />} />
+                            })
+                            }
+
+                            {projectsArr
+                                .filter((project) => {
+                                    return !project.featured
+                                })
+                                .map((project) => {
+                                    return <FadeUp delay={0.1} text={<Project project={project} />} />
+                                })
+                            }
                         </>
                     )
                 }

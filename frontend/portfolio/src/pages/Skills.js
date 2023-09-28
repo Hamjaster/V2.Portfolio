@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { FaReact, FaHtml5, FaCss3, FaNodeJs, FaServer, FaPython, FaGithub } from 'react-icons/fa'
-import { BiLogoTailwindCss, BiLogoMongodb, BiLogoCPlusPlus } from 'react-icons/bi'
-import { TbBrandVscode } from 'react-icons/tb'
+import { BiLogoTailwindCss, BiLogoMongodb, BiLogoCPlusPlus, BiLogoRedux } from 'react-icons/bi'
+import { TbBrandVscode, TbBrandNextjs } from 'react-icons/tb'
 
 import FadeUp from '../components/FadeUp'
 
@@ -30,12 +30,14 @@ export default function Skills() {
                 <Skill icon={<FaCss3 />} text={'CSS3'} />
                 <Skill icon={<FaHtml5 />} text={'HTML5'} />
                 <Skill icon={<FaNodeJs />} text={'NodeJS'} />
-                <Skill icon={<FaServer />} text={'Servers'} />
+                <Skill icon={<FaServer />} text={'Servers'} iconSize={'text-2xl'} />
                 <Skill icon={<FaPython />} text={'Python'} />
                 <Skill icon={<FaGithub />} text={'Github'} />
                 <Skill icon={<BiLogoMongodb />} text={'MongoDB'} s={'text-2xl'} mdS={'text-3xl'} />
                 <Skill icon={<BiLogoCPlusPlus />} text={'C++'} />
                 <Skill icon={<TbBrandVscode />} text={'VScode'} />
+                <Skill icon={<BiLogoRedux />} text={'Redux'} />
+                <Skill icon={<TbBrandNextjs />} text={'Next'} />
                 {/* <Skill icon={<img src={x} />} text={'Git'} /> */}
 
             </div>
