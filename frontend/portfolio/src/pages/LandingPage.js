@@ -142,8 +142,8 @@ export default function LandingPage() {
                                 'I make cool websites 😉',
                                 2400
                             ]}
-                            speed={30}
-                            deletionSpeed={130}
+                            speed={50}
+                            deletionSpeed={170}
                             repeat={Infinity}
                         />
                     </motion.div>
