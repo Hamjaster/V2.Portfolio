@@ -15,6 +15,10 @@ app.get('/', function (req, res) {
     res.send('API is running successfuly')
 })
 
+app.get('/test', function (req, res) {
+    res.send('API is testing successfuly')
+})
+
 app.get('/projects', async function (req, res) {
     console.log('getting projects');
     try {

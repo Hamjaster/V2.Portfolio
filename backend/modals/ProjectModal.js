@@ -5,7 +5,8 @@ const ProjectsSchema = mongoose.Schema({
     desc: String,
     link: String,
     img: String,
-    featured: Boolean
+    featured: Boolean,
+    remove: Boolean
 })
 
 const ProjectModal = mongoose.model('projects', ProjectsSchema)

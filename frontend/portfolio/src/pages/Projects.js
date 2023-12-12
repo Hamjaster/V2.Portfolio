@@ -60,6 +60,7 @@ export default function Projects() {
                     )
                     : (
                         <>
+
                             {/* Displaying un-featured products */}
                             {projectsArr
                                 .filter((project) => {
