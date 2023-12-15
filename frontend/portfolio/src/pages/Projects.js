@@ -19,7 +19,11 @@ export default function Projects() {
         setLoading(true)
         try {
             const { data } = await axios.get('https://v2-portfolio-cxfebf5bs-hamjaster.vercel.app/projects')
-            setprojectsArr(data)
+
+            const filteredData = data.filter((project) => {
+                return !project.remove;
+            })
+            setprojectsArr(filteredData)
             setLoading(false)
         } catch (error) {
             console.log(error);
@@ -35,10 +39,6 @@ export default function Projects() {
 
     useEffect(() => {
         console.log(projectsArr, 'projectsArr');
-        const filtered = projectsArr.filter((project) => {
-            return !project.featured
-        })
-        console.log(filtered)
     }, [projectsArr])
 
 
