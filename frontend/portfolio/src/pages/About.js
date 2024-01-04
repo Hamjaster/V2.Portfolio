@@ -92,12 +92,10 @@ export default function About() {
         <p className='text-xl 2xl:text-3xl  w-11/12 md:w-11/12 leading-relaxed font-sans '>
           <FadeUp delay={i + 0.1} text="👋 Meet the Digital Dynamo: Hamza Shah! 🚀" />
           <br />
-          <FadeUp delay={i + 0.2} text="👨‍💻 An 18-year-old with a passion for Full Stack web development, Hamza is not your average student. When he's not conquering textbooks, he's conquering the web." />
+          <FadeUp delay={i + 0.2} text="Hey there, Future Collaborator! I'm the digital handyman you've been dreaming of – a Full Stack Developer with proven experience of 3+ years" />
 
           <br />
-          <FadeUp delay={i + 0.2} text="🌐 Armed with React, HTML, and CSS, he spins webs of interactivity that make users' jaws drop. But that's just the tip of the iceberg. He manages
-          Backend, Handles API's and makes web-apps. He's a Python maestro, bending
-          the language to automate tasks and scrape data." />
+          <FadeUp delay={i + 0.2} text="I'm Expert in Figma to HTML, CSS, Tailwind Responsive Websites, NextJS, React js Websites, Typescript, MERN Stack Websites. I've worked with several organizations to offer web solutions to them and you might be the next on the list." />
 
 
         </p>
