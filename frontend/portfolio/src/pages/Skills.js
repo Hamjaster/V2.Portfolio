@@ -30,8 +30,8 @@ export default function Skills() {
                 <Skill icon={<FaCss3 />} text={'CSS3'} />
 
                 <Skill icon={<FaNodeJs />} text={'NodeJS'} />
-                <Skill icon={<FaServer />} text={'Servers'} iconSize={'text-2xl'} />
-                <Skill icon={<FaPython />} text={'Python'} />
+                <Skill icon={<FaServer />} text={'Servers'} />
+                {/* <Skill icon={<FaPython />} text={'Python'} /> */}
                 <Skill icon={<FaGithub />} text={'Github'} />
                 <Skill icon={<BiLogoMongodb />} text={'MongoDB'} s={'text-2xl'} mdS={'text-3xl'} />
                 <Skill icon={<BiLogoCPlusPlus />} text={'C++'} />

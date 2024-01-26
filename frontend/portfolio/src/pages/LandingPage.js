@@ -133,17 +133,17 @@ export default function LandingPage() {
                         <TypeAnimation
                             sequence={[
                                 // Same substring at the start will only be typed once, initially
-                                'I’m a Front-end developer 💻',
+                                'I’m a Full stack developer 💻',
                                 2400,
                                 'I’m a MERN magician 🧙 ',
                                 2400,
-                                'I’m a UI/UX designer ✍🎨 ',
+                                'I build complex web applications ',
                                 2400,
-                                'I make cool websites 😉',
+                                'I develop web solutions for businesses',
                                 2400
                             ]}
                             speed={50}
-                            deletionSpeed={170}
+                            deletionSpeed={10}
                             repeat={Infinity}
                         />
                     </motion.div>

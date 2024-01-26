@@ -87,7 +87,7 @@ function App() {
   ]
 
   return (
-    <div className="App font-opensans overflow-x-hidden">
+    <div className="App overflow-x-hidden">
 
 
       {theme

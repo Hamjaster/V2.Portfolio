@@ -40,7 +40,7 @@ export default function Animate({ text, delay, shake, wrap }) {
 
     return (
         <motion.div
-            className='items-center '
+            className='items-center font-sans'
             style={{ display: "flex", paddingBottom: '8px' }}
             variants={container}
             initial="hidden"
