@@ -9,6 +9,7 @@ const ProjectsSchema = mongoose.Schema({
   video: String,
   featured: Boolean,
   remove: Boolean,
+  skills: Array,
 });
 
 const ProjectModal = mongoose.model("projects", ProjectsSchema);
